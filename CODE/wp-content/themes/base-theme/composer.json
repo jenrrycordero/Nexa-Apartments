@@ -1,0 +1,30 @@
+{
+    "name" : "razz-interactive/base-theme",
+    "description" : "Razz Interactive base development theme",
+    "type" : "wordpress-theme",
+    "keywords" : [ "wordpress" ],
+    "license" : "GPL-2.0+",
+    "authors" : [
+        {
+            "name" : "Alian Nieves",
+            "email" : "an@razzinteractive.com",
+            "role" : "Lead Developer"
+        }
+    ],
+    "require" : {
+        "composer/installers" : "~1.0.0",
+        "php" : ">=5.2.4",
+        "components/modernizr": "^2.8",
+        "components/font-awesome": "^4.7",
+        "twbs/bootstrap-sass": "^3.3",
+        "twbs/bootstrap": "^3.3"
+    },
+    "extra" : {
+        "installer-name" : "base-theme"
+    },
+    "homepage" : "http://razzinteractive.com",
+    "support": {
+        "issues": "https://github.com/razzinteractive/razz-base-theme/issues",
+        "source": "https://github.com/razzinteractive/razz-base-theme"
+    }
+}

@@ -1,0 +1,37 @@
+//General variables - Breakpoints.
+$phone_small: 300px;
+$phone: 480px;
+$tabletPortrait: 860px;
+$tabletLandscape: 1024px;
+$desktop: 1174px;
+$largeScreen: 1400px;
+$sideNavigationWidth: 350px;
+
+//HOME PAGE BUTTONS
+$menuTogglerText: 'MENU';
+$menuTogglerClose: 'CLOSE';
+$wellcomeButtonText: 'WELCOME HOME';
+$mobileWellcomeButtonText: 'SEE PROPERTY';
+$wellcomeButtonAfter: 'BACK';
+
+//General variables - Colors.
+$firstColor : #fff;
+$secondColor : #2a2a2a;
+$thirdColor : #333b45;
+$fourthColor : #f19505;
+
+//Content dimmensions
+$contentMaxWidth : 1400px;
+$textContentMaxWidth : 800px;
+
+
+//Specific files.
+@import "breakpoint";
+@import "mixins";
+@import "typografy";
+@import "general";
+@import "nexa";
+@import "mobile";
+
+
+$btnShadow: ""; //to use on the buttons:hover event.

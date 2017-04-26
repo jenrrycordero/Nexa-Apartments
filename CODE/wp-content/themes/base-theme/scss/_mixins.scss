@@ -1,0 +1,68 @@
+/*
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+@mixin triangle($direction, $size: 6px, $color: #222){
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0; width: 0;
+  @if ($direction == 'up'){
+    border-bottom: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+  }
+  @else if ($direction == 'down'){
+    border-top: $size solid $color;
+    border-left: 1/2*$size solid transparent;
+    border-right: 1/2*$size solid transparent;
+  }
+  @else if ($direction == 'left'){
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-right: $size solid $color;
+  }
+  @else if ($direction == 'right'){
+    border-top: 1/2*$size solid transparent;
+    border-bottom: 1/2*$size solid transparent;
+    border-left: $size solid $color;
+  }
+}
+
+/*
+ * @include alert() within an element to add it a notification-like effect, pulsating effect.
+ */
+@mixin alert($color: gold, $duration: 1000ms) {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 6px; right: 6px;
+    height: 8px; width: 8px;
+    @include border-radius(10px);
+    background-color: $color;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    height: 20px; width: 20px;
+    @include border-radius(20px);
+    background-color: transparent;
+    border: solid $color;
+    border-width: 0px; // animates
+    @include box-sizing(border-box);
+    animation: alertAnimation $duration infinite ease 0ms;
+  }
+}
+@keyframes alertAnimation {
+  // -vendor prefixes omitted for brevity, but should be used in production
+  from {
+    border-width: 3px;
+    opacity: 1;
+  }
+  to {
+    border-width: 0;
+    opacity: 0;
+    //border-color: rgba(gold, .1);
+  }
+}

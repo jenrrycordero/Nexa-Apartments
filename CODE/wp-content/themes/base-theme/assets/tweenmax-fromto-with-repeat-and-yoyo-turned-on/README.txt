@@ -1,0 +1,3 @@
+A Pen created at CodePen.io. You can find this one at http://codepen.io/ncerminara/pen/vEOYKy.
+
+ You’ll specify two animation properties for it to animate from one and then to the other. Hopefully you’re wondering why you can’t just use the to() function and set the start styles with CSS. Well, you can and that’s totally okay. The function fromTo however introduces a bunch of other options like yoyo and repeat.

@@ -1,0 +1,12 @@
+.razz-neighborhood-widget {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.razz-neighborhood-widget iframe {
+  border: medium none;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  width: 100%;
+}
